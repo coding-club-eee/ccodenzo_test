@@ -57,13 +57,10 @@ function generateForm(inputArray,nameArray){
     });
     formTag.append(ip);
     for(var i=1;i<inputArray.length;i++){
-      var style_main=(i <= 5) ? "block" : "none";
       var mainDiv = $('<div>', {
         class: 'main_div',
-        id:'q'+i.toString(),
-        css:{
-          'display':style_main
-        }
+        id:'q'+i.toString()
+        
         
       });
       var temp = inputArray[i];
@@ -229,21 +226,10 @@ function generateForm(inputArray,nameArray){
       "entry.705004170"
   ];
 
-  let questions = document.getElementsByClassName("main_div");
-  let currentQuestion = 0;
   
-  function displayQuestion() {
-    questions[currentQuestion].style.display = "block";
-    currentQuestion++;
-    if (currentQuestion === questions.length) {
-      return;
-    }
-    setTimeout(displayQuestion,  50000);
-  }
 
 // generateForm(testArray);
 $(document).ready(function(){
   generateForm(question_array,name_array);  
-  displayQuestion();
 
 });
