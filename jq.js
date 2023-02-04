@@ -238,7 +238,7 @@ function generateForm(inputArray,nameArray){
     if (currentQuestion === questions.length) {
       return;
     }
-    setTimeout(displayQuestion, 10);
+    setTimeout(displayQuestion,  60000);
   }
 
 // generateForm(testArray);
